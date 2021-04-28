@@ -26,7 +26,7 @@ Since this is a very minimal machine (not even a /lib folder), a share is mounte
 With a quick look, we find the file `/BACKUP/syscall_64.tbl`, and we can see something interesting inside:   
 ![Ring0Calling_syscall_list.png](images/Ring0Calling_syscall_list.png)
 
-This is the list of the [syscalls](https://en.wikipedia.org/wiki/System_call) on the machine. Sys_hero seems to be a newly added syscall.
+This is the list of the [syscalls](https://en.wikipedia.org/wiki/System_call) on the machine. Sys_hero seems to be a newly added one.
 
 Therefore, we can make a simple program in C to call this custom system call.
 
@@ -58,7 +58,7 @@ ring0@ai.heroctf.fr# ./run
 root:/# cd /mnt/share
 root:/mnt/share# ls
 syscall
-root:/mnt/share## chmod +x syscall
+root:/mnt/share# chmod +x syscall
 root:/mnt/share# ./syscall
 ret: 0
 ```

@@ -37,7 +37,7 @@ Let's compare it with an other binary on my system:
 
 Let's try and change the machine type to match our system ([x86_64](https://en.wikipedia.org/wiki/X86-64)). We will use [GHex](https://wiki.gnome.org/Apps/Ghex) to modify the binary.
 
-this is the header of an ELF file:   
+this is the header of an ELF file ([source](http://blog.k3170makan.com/2018/09/introduction-to-elf-format-elf-header.html)):   
 ![sELF_control_header.png](images/sELF_control_header.png)
 
 The magic is 16 bytes long, then there is a type who is 2 bytes long, then the machine type, 2 bytes long too. So, we need to edit the value of the machine type at offset 16 (0x12) using this [correspondence table](http://www.sco.com/developers/gabi/latest/ch4.eheader.html).
